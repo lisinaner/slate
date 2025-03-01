@@ -61,9 +61,11 @@ const String = (props: {
  */
 const TextString = (props: { text: string; isTrailing?: boolean }) => {
   const { text, isTrailing = false } = props
+  console.log("🚀 ~ string.tsx:67 ~ TextString ~ props:", props)
   const ref = useRef<HTMLSpanElement>(null)
   const getTextContent = () => {
     return `${text ?? ''}${isTrailing ? '\n' : ''}`
+ 
   }
   const [initialText] = useState(getTextContent)
 
@@ -81,6 +83,7 @@ const TextString = (props: { text: string; isTrailing?: boolean }) => {
     const textWithTrailing = getTextContent()
 
     if (ref.current && ref.current.textContent !== textWithTrailing) {
+      console.log("🚀 ~ string.tsx:84 ~ useIsomorphicLayoutEffect ~ textWithTrailing:", '是使用修改textContent来修改内容的')
       ref.current.textContent = textWithTrailing
     }
 
