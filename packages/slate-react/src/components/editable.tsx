@@ -157,6 +157,7 @@ export const Editable = forwardRef(
       ...attributes
     } = props
     const editor = useSlate()
+    console.log("🚀 ~ editable.tsx:160 ~ renderLeaf:", )
     // Rerender editor when composition status changed
     const [isComposing, setIsComposing] = useState(false)
     const ref = useRef<HTMLDivElement | null>(null)
@@ -1852,6 +1853,7 @@ export const Editable = forwardRef(
     )
   }
 )
+
 
 /**
  * The props that get passed to renderPlaceholder

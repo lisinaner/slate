@@ -1,9 +1,9 @@
 // Components
 export {
   Editable,
-  RenderElementProps,
-  RenderLeafProps,
-  RenderPlaceholderProps,
+  // RenderElementProps,
+  // RenderLeafProps,
+  // RenderPlaceholderProps,
   DefaultPlaceholder,
 } from './components/editable'
 

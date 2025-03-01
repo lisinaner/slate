@@ -68,6 +68,8 @@ const useChildren = (props: {
     }
 
     if (Element.isElement(n)) {
+      console.log("🚀 ~ use-children.tsx:71 ~ Element.isElement(n):", Element.isElement(n))
+      console.log("🚀 ~ use-children.tsx:71 ~ n:", n)
       children.push(
         <SelectedContext.Provider key={`provider-${key.id}`} value={!!sel}>
           <ElementComponent
@@ -98,8 +100,9 @@ const useChildren = (props: {
     NODE_TO_INDEX.set(n, i)
     NODE_TO_PARENT.set(n, node)
   }
-
+  // console.log("🚀 ~ use-children.tsx:104 ~ children:", children)
   return children
 }
+  
 
 export default useChildren
